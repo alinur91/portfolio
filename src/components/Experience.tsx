@@ -1,14 +1,20 @@
 import { technologies } from "../data/data";
 import ExperienceCard from "./ExperienceCard";
+import { MdOutlineKeyboardDoubleArrowDown } from "react-icons/md";
+import TitleAndSubtitle from "./TitleAndSubtitle";
+import { Sections } from "../ts/enums";
 
 const Experience = () => {
   return (
-    <div className="flex flex-col items-center mt-16">
-      <h3 >Explore My</h3>
-      <h1 className="tracking-wider text-3xl md:text-5xl font-bold mt-2 sm:mt-3 mb-8 sm:mb-12">
-        Experience
-      </h1>
-      <div className="flex flex-col sm:flex-row gap-8 md:gap-10 justify-center items-center mx-8 lg:mx-30">
+    <div className="flex flex-col items-center  w-full relative mt-16 lg:mt-72">
+      <a href="#experience">
+        <MdOutlineKeyboardDoubleArrowDown className="hidden lg:block lg:absolute lg:right-[-5%] lg:top-[-25%] lg:text-5xl cursor-pointer" />
+      </a>
+      <TitleAndSubtitle section={Sections.Experience} />
+      <div
+        id="experience"
+        className="flex flex-col sm:flex-row gap-8 md:gap-10 justify-center items-center w-full"
+      >
         <ExperienceCard data={technologies.slice(0, 5)} />
         <ExperienceCard data={technologies.slice(5)} />
       </div>

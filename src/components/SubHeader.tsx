@@ -1,18 +1,19 @@
 import me from "../images/me.jpg";
 import { FaLinkedin } from "react-icons/fa";
 import { FaSquareGithub } from "react-icons/fa6";
+import TitleAndSubtitle from "./TitleAndSubtitle";
+import { Sections } from "../ts/enums";
 
 const SubHeader = () => {
   return (
-    <div className="flex flex-col justify-center lg:flex-row items-center gap-12 lg:gap-20">
+    <div className="flex flex-col justify-center xl:flex-row items-center gap-12 lg:gap-20">
       <div className="flex items-center justify-center">
         <img className="h-72 lg:h-[400px] rounded-full" src={me} alt="ali" />
       </div>
-      <div className="flex flex-col items-center gap-6">
-        <h3 className="text-xl text-gray-600 font-semibold">Hello, I'm</h3>
-        <h1 className="text-4xl font-bold">Alisher Nurlybayev</h1>
-        <h2 className="text-3xl font-bold text-gray-600">Frontend Developer</h2>
-        <div className="flex gap-4">
+      <div className="flex flex-col items-center gap-2">
+        <TitleAndSubtitle section={Sections.SubHeader} />
+        <h2 className="text-xl md:text-3xl font-bold text-gray-600 my-2 sm:my-3">Frontend Developer</h2>
+        <div className="flex gap-4 mb-2">
           <a
             target="_blank"
             href="https://hh.kz/resume/8f9572cdff0b8bf0180039ed1f4d734345396d"

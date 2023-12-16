@@ -1,4 +1,4 @@
-import { TechnologyType } from "../types/types";
+import { TechnologyType } from "../ts/types";
 
 export const technologies: TechnologyType[] = [
   { name: "HTML", mastery: "Experienced" },

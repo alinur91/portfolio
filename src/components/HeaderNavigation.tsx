@@ -9,36 +9,52 @@ const HeaderNavigation = ({
   toggleShowMobileMenu: () => void;
 }) => {
   return (
-    <div className="flex justify-between  items-center py-8 px-20 md:py-12 md:px-44  lg:py-16 lg:px-40">
-      <h1 className="text-base 	md:text-2xl">Alisher Nurlybayev</h1>
+    <div className="flex justify-between  items-center p-14 ">
+      <h1 className=" text-xl sm:text-3xl">Alisher Nurlybayev</h1>
       <div className="relative">
         {showMobileMenu ? (
           <IoMdClose
             onClick={toggleShowMobileMenu}
             cursor="pointer"
-            className="text-3xl md:text-4xl lg:hidden"
+            className="text-3xl md:text-4xl xl:hidden"
           />
         ) : (
           <RxHamburgerMenu
             onClick={toggleShowMobileMenu}
-            className="text-3xl md:text-4xl lg:hidden"
+            className="text-3xl md:text-4xl xl:hidden"
             cursor="pointer"
           />
         )}
         <div
           className={`${showMobileMenu ? `flex flex-col` : `hidden`}
-           gap-2 md:gap-4 bg-slate-200 md:text-xl p-2 absolute right-[15%] top-[90%] lg:static lg:bg-inherit lg:flex  lg:flex-row lg:gap-6 lg:p-0`}
+           gap-2 md:gap-4 bg-slate-100 text-xl sm:text-2xl p-2  absolute right-[15%] top-[90%] xl:static xl:bg-inherit xl:flex   xl:flex-row xl:gap-6 xl:p-0`}
         >
-          <a onClick={toggleShowMobileMenu} href="#about">
+          <a
+            className="xl:border-transparent xl:border-b-2 xl:pb-1 xl:hover:text-gray-500 xl:hover:pb-1 xl:hover:border-b-2 xl:hover:border-b-gray-400 xl:hover:transition ease-in-out duration-300"
+            onClick={toggleShowMobileMenu}
+            href="#about"
+          >
             About
           </a>
-          <a onClick={toggleShowMobileMenu} href="#experience">
+          <a
+            className="xl:border-transparent xl:border-b-2 xl:hover:text-gray-500 xl:hover:pb-1 xl:hover:border-b-2 xl:hover:border-b-gray-400 xl:hover:transition ease-in-out duration-300"
+            onClick={toggleShowMobileMenu}
+            href="#experience"
+          >
             Experience
           </a>
-          <a onClick={toggleShowMobileMenu} href="#projects">
+          <a
+            className="xl:border-transparent xl:border-b-2 xl:hover:text-gray-500 xl:hover:pb-1 xl:hover:border-b-2 xl:hover:border-b-gray-400 xl:hover:transition ease-in-out duration-300"
+            onClick={toggleShowMobileMenu}
+            href="#projects"
+          >
             Projects
           </a>
-          <a onClick={toggleShowMobileMenu} href="#contact">
+          <a
+            className="xl:border-transparent xl:border-b-2 xl:hover:text-gray-500 xl:hover:pb-1 xl:hover:border-b-2 xl:hover:border-b-gray-400 xl:hover:transition ease-in-out duration-300"
+            onClick={toggleShowMobileMenu}
+            href="#contact"
+          >
             Contact
           </a>
         </div>
