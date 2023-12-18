@@ -24,15 +24,14 @@ const Buttons = ({ type }: { type: Btns }) => {
       case Btns.Project1:
         btnClass2 = btnClass1;
         href1 = "https://github.com/alinur91/quiz-app";
-        href2 = "https://github.com/alinur91/quiz-app";
+        href2 = "https://brilliant-zabaione-e8f99f.netlify.app/";
         break;
 
       case Btns.Project2:
         btnClass2 = btnClass1;
         href1 =
           "https://github.com/alinur91/e-commerce-search-and-filtering-only-";
-        href2 =
-          "https://github.com/alinur91/e-commerce-search-and-filtering-only-";
+        href2 = "https://elegant-macaron-4fb242.netlify.app/";
         break;
 
       case Btns.Project3:
@@ -49,7 +48,7 @@ const Buttons = ({ type }: { type: Btns }) => {
         <a target="_blank" href={href1}>
           <button className={btnClass1}>{btn1Text}</button>
         </a>
-        <a href={href2}>
+        <a target="_blank" href={href2}>
           <button className={btnClass2}>{btn2Text}</button>
         </a>
       </>

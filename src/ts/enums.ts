@@ -12,3 +12,8 @@ export enum Btns {
   Project2= 'PROJECT2',
   Project3= 'PROJECT3',
 }
+
+export enum Nav {
+ Header= 'HEADER',
+ Footer= 'FOOTER',
+}

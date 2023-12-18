@@ -25,6 +25,7 @@ const TitleAndSubtitle = ({ section }: { section: Sections }) => {
       case Sections.Contact:
         title = "Get in Touch";
         subTitle = "Contact Me";
+        subtitleClass += "mb-10";
         break;
       case Sections.SubHeader:
         title = "Hello, I'm";
