@@ -39,7 +39,7 @@ export const cardsData = [
     imgClass: projectsCardInfo.imgClass,
     titleClass: projectsCardInfo.titleClass,
     imgSrc: project2,
-    titleText: "E-commerce",
+    titleText: "Ecommerce",
     btnType: Btns.Project2,
   },
   {
