@@ -31,7 +31,7 @@ export const cardsData = [
     imgClass: projectsCardInfo.imgClass,
     titleClass: projectsCardInfo.titleClass,
     imgSrc: project1,
-    titleText: "Project One",
+    titleText: "Quiz App",
     btnType: Btns.Project1,
   },
   {
@@ -39,7 +39,7 @@ export const cardsData = [
     imgClass: projectsCardInfo.imgClass,
     titleClass: projectsCardInfo.titleClass,
     imgSrc: project2,
-    titleText: "Project Two",
+    titleText: "E-commerce",
     btnType: Btns.Project2,
   },
   {
@@ -48,7 +48,7 @@ export const cardsData = [
     imgClass: "border-2 border-transparent rounded-lg sm:w-full sm:h-full",
     titleClass: projectsCardInfo.titleClass,
     imgSrc: project3,
-    titleText: "Project Three",
+    titleText: "Chat App",
     btnType: Btns.Project3,
   },
 ];
