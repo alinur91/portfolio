@@ -19,7 +19,7 @@ export const technologies: TechnologyType[] = [
 
 const projectsCardInfo = {
   cardClass:
-    "col-span-1 sm:col-span-2 md:col-span-1 xl:col-span-1 border-2 border-neutral-400 rounded-3xl px-6 py-5 sm:px-12 sm:py-6 md:px-3 md:py-5 lg:px-9  flex flex-col gap-4 justify-center items-center",
+    "col-span-1 sm:col-span-2 md:col-span-1 xl:col-span-1 border-2 border-neutral-400 rounded-3xl px-6 py-5 sm:px-12 sm:py-6 md:px-2 md:py-5 lg:px-9  flex flex-col gap-4 justify-center items-center",
   imgClass:
     "h-36 w-48  sm:w-full sm:h-full   border-2 border-transparent rounded-lg",
   titleClass: "font-bold text-lg sm:text-2xl sm:tracking-wider",

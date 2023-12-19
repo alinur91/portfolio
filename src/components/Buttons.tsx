@@ -8,6 +8,7 @@ const Buttons = ({ type }: { type: Btns }) => {
 
     let href1;
     let href2;
+    let target = '_blank';
     let btn1Text = "Github";
     let btn2Text = "Live Demo";
 
@@ -17,6 +18,7 @@ const Buttons = ({ type }: { type: Btns }) => {
           "rounded-3xl bg-transparent hover:bg-black text-white font-semibold  hover:text-white py-3 px-6 border border-black hover:border-transparent bg-zinc-700 text-sm transition ease-in-out duration-300";
         href1 = "https://hh.kz/resume/8f9572cdff0b8bf0180039ed1f4d734345396d";
         href2 = "#contact";
+        target = '_self'
         btn1Text = "See resume";
         btn2Text = "Contact Info";
         break;
@@ -45,10 +47,10 @@ const Buttons = ({ type }: { type: Btns }) => {
 
     return (
       <>
-        <a target="_blank" href={href1}>
+        <a target={target} href={href1}>
           <button className={btnClass1}>{btn1Text}</button>
         </a>
-        <a target="_blank" href={href2}>
+        <a target={target} href={href2}>
           <button className={btnClass2}>{btn2Text}</button>
         </a>
       </>

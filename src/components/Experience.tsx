@@ -8,7 +8,7 @@ const Experience = () => {
   return (
     <div className="flex flex-col items-center  w-full relative mt-16 lg:mt-72">
       <a href="#experience">
-        <MdOutlineKeyboardDoubleArrowDown className="hidden lg:block lg:absolute lg:right-[-5%] lg:top-[-25%] lg:text-5xl cursor-pointer" />
+        <MdOutlineKeyboardDoubleArrowDown className="hidden lg:block lg:absolute lg:right-[-7%] lg:top-[-25%] lg:text-5xl cursor-pointer" />
       </a>
       <TitleAndSubtitle section={Sections.Experience} />
       <div

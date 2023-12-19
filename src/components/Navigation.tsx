@@ -11,7 +11,6 @@ const Navigation = ({
   toggleShowMobileMenu?: () => void;
   section: Nav;
 }) => {
- 
   const shouldShowIcons = (section: Nav) => {
     if (section === Nav.Header) {
       return showMobileMenu ? (
@@ -33,11 +32,17 @@ const Navigation = ({
   };
 
   const headerNavClass = {
-    navContainer: `${showMobileMenu ? `flex flex-col` : `hidden`}
-           gap-2 md:gap-4 bg-slate-100 text-xl sm:text-2xl p-2  absolute right-[15%] top-[90%] xl:static xl:bg-inherit xl:flex   xl:flex-row xl:gap-6 xl:p-0`,
+    navContainer: `${showMobileMenu ? `flex flex-col items-center` : `hidden`}
+           gap-4  bg-slate-100 text-xl sm:text-2xl p-2  absolute right-[15%] top-[90%] xl:static xl:bg-inherit xl:flex   xl:flex-row xl:gap-8 xl:p-0`,
     navElement:
-      "xl:border-transparent xl:border-b-2 xl:pb-1 xl:hover:text-gray-500 xl:hover:pb-1 xl:hover:border-b-2 xl:hover:border-b-gray-400 xl:hover:transition ease-in-out duration-300",
+      "xl:border-transparent xl:border-b-2 xl:py-3 xl:hover:text-gray-500 xl:hover:py-3 xl:hover:border-b-2 xl:hover:border-b-gray-400 xl:hover:transition ease-in-out duration-300",
     toggleShowMobileMenu,
+  };
+
+  const footerNavClass = {
+    navContainer: `flex flex-col items-center sm:flex-row gap-1 sm:gap-8 lg:gap-9  bg-slate-100  sm:text-2xl p-2`,
+    navElement:
+      "w-fit border-transparent border-b-2 py-2 sm:py-3 hover:text-gray-500 hover:py-2 sm:hover:py-3 hover:border-b-2 hover:border-b-gray-400 hover:transition ease-in-out duration-300",
   };
 
   const navElementsInfo = [
@@ -60,13 +65,17 @@ const Navigation = ({
   ];
 
   return (
-    <div className="relative">
+    <div
+      className={`${section === Nav.Header && "relative"} ${
+        section === Nav.Footer && "mt-24 sm:mt-16 xl:mt-44"
+      }`}
+    >
       {shouldShowIcons(section)}
       <div
         className={
           section === Nav.Header
             ? headerNavClass.navContainer
-            : headerNavClass.navContainer
+            : footerNavClass.navContainer
         }
       >
         {navElementsInfo.map((navEl) => (
@@ -75,7 +84,7 @@ const Navigation = ({
             className={
               section === Nav.Header
                 ? headerNavClass.navElement
-                : headerNavClass.navElement
+                : footerNavClass.navElement
             }
             onClick={
               section === Nav.Header
