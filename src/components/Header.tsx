@@ -14,7 +14,7 @@ const Header = () => {
 
   return (
     <div className="flex flex-col gap-20 lg:gap-40">
-      <div className="flex justify-between   items-center  py-14 px-2">
+      <div className="flex justify-between   items-center  py-14">
         <h1 className=" text-xl sm:text-3xl xl:border-transparent xl:border-b-2 xl:pb-1">
           {t("name")}
         </h1>
