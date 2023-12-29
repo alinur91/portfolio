@@ -1,6 +1,10 @@
+import { useTranslation } from "react-i18next";
 import { Sections } from "../ts/enums";
 
 const TitleAndSubtitle = ({ section }: { section: Sections }) => {
+  const { t } = useTranslation("header");
+  const { t: tr } = useTranslation("about");
+
   const getTextsData = (section: Sections) => {
     let title;
     let subTitle;
@@ -9,8 +13,8 @@ const TitleAndSubtitle = ({ section }: { section: Sections }) => {
 
     switch (section) {
       case Sections.About:
-        title = "Get To Know More";
-        subTitle = "About Me";
+        title = tr("know-more");
+        subTitle = tr("about-me");
         subtitleClass += "lg:mb-12";
         break;
       case Sections.Experience:
@@ -28,8 +32,8 @@ const TitleAndSubtitle = ({ section }: { section: Sections }) => {
         subtitleClass += "mb-10";
         break;
       case Sections.SubHeader:
-        title = "Hello, I'm";
-        subTitle = "Alisher Nurlybayev";
+        title = t("greetings");
+        subTitle = t("name");
         break;
       default:
         break;

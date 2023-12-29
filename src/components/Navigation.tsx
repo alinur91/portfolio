@@ -1,6 +1,7 @@
 import { IoMdClose } from "react-icons/io";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { Nav } from "../ts/enums";
+import { useTranslation } from "react-i18next";
 
 const Navigation = ({
   showMobileMenu,
@@ -11,6 +12,7 @@ const Navigation = ({
   toggleShowMobileMenu?: () => void;
   section: Nav;
 }) => {
+  const {t} = useTranslation('header')
   const shouldShowIcons = (section: Nav) => {
     if (section === Nav.Header) {
       return showMobileMenu ? (
@@ -33,7 +35,7 @@ const Navigation = ({
 
   const headerNavClass = {
     navContainer: `${showMobileMenu ? `flex flex-col items-center` : `hidden`}
-           gap-4  bg-slate-100 text-xl sm:text-2xl p-2  absolute right-[15%] top-[90%] xl:static xl:bg-inherit xl:flex   xl:flex-row xl:gap-8 xl:p-0`,
+           gap-4  bg-slate-100 text-xl sm:text-2xl p-2  absolute right-[15%] top-[90%] xl:static xl:bg-inherit xl:flex   xl:flex-row xl:items-center xl:gap-8 xl:p-0`,
     navElement:
       "xl:border-transparent xl:border-b-2 xl:py-3 xl:hover:text-gray-500 xl:hover:py-3 xl:hover:border-b-2 xl:hover:border-b-gray-400 xl:hover:transition ease-in-out duration-300",
     toggleShowMobileMenu,
@@ -47,28 +49,28 @@ const Navigation = ({
 
   const navElementsInfo = [
     {
-      anchorText: "About",
+      anchorText: t("about"),
       href: "#about",
     },
     {
-      anchorText: "Experience",
+      anchorText: t("experience"),
       href: "#experience",
     },
     {
-      anchorText: "Projects",
+      anchorText: t("projects"),
       href: "#projects",
     },
     {
-      anchorText: "Contact",
+      anchorText: t("contact"),
       href: "#contact",
     },
   ];
 
   return (
     <div
-      className={`${section === Nav.Header && "relative"} ${
-        section === Nav.Footer && "mt-24 sm:mt-16 xl:mt-44"
-      }`}
+      className={`${
+        section === Nav.Header && "relative flex  text-xl sm:text-2xl"
+      } ${section === Nav.Footer && "mt-24 sm:mt-16 xl:mt-44"}`}
     >
       {shouldShowIcons(section)}
       <div
