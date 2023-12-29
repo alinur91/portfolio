@@ -31,15 +31,11 @@ const LanguageSelector = () => {
       className="relative flex items-center gap-1 cursor-pointer group text-xl sm:text-2xl bg-slate-100  p-2 w-[100px]"
     >
       {getShorthandLanguageName(languages, i18n.language)}
-      <div>
-        {showLanguageOptions ? (
-          <IoIosArrowUp className="group-hover:text-slate-400" />
-        ) : (
-          <IoIosArrowDown className="group-hover:text-slate-400" />
-        )}
+      <div className="group-hover:text-slate-400">
+        {showLanguageOptions ? <IoIosArrowUp /> : <IoIosArrowDown />}
       </div>
       {showLanguageOptions && (
-        <ul className="absolute top-[100%] flex flex-col gap-4 w-full">
+        <ul className="absolute top-[100%] flex flex-col gap-4 w-full group-hover:text-transparent">
           {languages.map((languageInfo) => (
             <li
               className={`${
