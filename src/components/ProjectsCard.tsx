@@ -1,7 +1,10 @@
+import { useTranslation } from "react-i18next";
 import { cardsData } from "../data/data";
 import Buttons from "./Buttons";
 
 const ProjectsCard = () => {
+  const { t } = useTranslation("projects");
+
   return (
     <div
       id="projects"
@@ -14,7 +17,7 @@ const ProjectsCard = () => {
             src={card.imgSrc}
             alt={card.titleText}
           />
-          <h1 className={card.titleClass}>{card.titleText}</h1>
+          <h1 className={card.titleClass}>{t(`app_${card.titleText}`)}</h1>
           <Buttons type={card.btnType} />
         </div>
       ))}

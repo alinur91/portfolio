@@ -1,11 +1,5 @@
 {
-  "name": "Alisher Nurlybayev",
-  "about": "About",
-  "experience": "Experience",
-  "projects": "Projects",
-  "contact": "Contact",
-  "greetings": "Hello, I'm",
-  "profession": "Frontend Developer",
-  "resume": "See resume",
-  "contact-info": "Contact Info"
+  "Level_Experienced": "Опытный",
+  "Level_Intermediate": "Средний",
+  "Level_Basic": "Базовый"
 }

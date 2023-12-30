@@ -2,8 +2,7 @@ import { useTranslation } from "react-i18next";
 import { Sections } from "../ts/enums";
 
 const TitleAndSubtitle = ({ section }: { section: Sections }) => {
-  const { t } = useTranslation("header");
-  const { t: tr } = useTranslation("about");
+  const { t } = useTranslation("titleAndSubtitle");
 
   const getTextsData = (section: Sections) => {
     let title;
@@ -13,45 +12,41 @@ const TitleAndSubtitle = ({ section }: { section: Sections }) => {
 
     switch (section) {
       case Sections.About:
-        title = tr("know-more");
-        subTitle = tr("about-me");
+        title = t("title_know-more");
+        subTitle = t("subtitle_about-me");
         subtitleClass += "lg:mb-12";
         break;
       case Sections.Experience:
-        title = "Explore My";
-        subTitle = "Experience";
+        title = t("title_explore");
+        subTitle = t("subtitle_experience");
         subtitleClass += "mb-10";
         break;
       case Sections.Projects:
-        title = "Browse My Recent";
-        subTitle = "Projects";
+        title = t("title_browse");
+        subTitle = t("subtitle_projects");
         break;
       case Sections.Contact:
-        title = "Get in Touch";
-        subTitle = "Contact Me";
+        title = t("title_touch");
+        subTitle = t("subtitle_contact");
         subtitleClass += "mb-10";
         break;
       case Sections.SubHeader:
-        title = t("greetings");
-        subTitle = t("name");
+        title = t("title_greetings");
+        subTitle = t("subtitle_name");
         break;
       default:
         break;
     }
 
-    return { title, subTitle, titleClass, subtitleClass };
+    return (
+      <>
+        <h3 className={titleClass}>{title}</h3>
+        <h1 className={subtitleClass}>{subTitle}</h1>
+      </>
+    );
   };
 
-  return (
-    <>
-      <h3 className={getTextsData(section).titleClass}>
-        {getTextsData(section).title}
-      </h3>
-      <h1 className={getTextsData(section).subtitleClass}>
-        {getTextsData(section).subTitle}
-      </h1>
-    </>
-  );
+  return <>{getTextsData(section)}</>;
 };
 
 export default TitleAndSubtitle;

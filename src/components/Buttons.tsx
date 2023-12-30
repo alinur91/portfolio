@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import { Btns } from "../ts/enums";
 
 const Buttons = ({ type }: { type: Btns }) => {
-  const { t } = useTranslation("header");
+  const { t } = useTranslation("buttons");
 
   const getBtnsInfo = (type: Btns) => {
     let btnClass1 =
@@ -13,7 +13,7 @@ const Buttons = ({ type }: { type: Btns }) => {
     let href2;
     let target = "_blank";
     let btn1Text = "Github";
-    let btn2Text = "Live Demo";
+    let btn2Text = t("btn_live");
 
     switch (type) {
       case Btns.About:
@@ -22,13 +22,12 @@ const Buttons = ({ type }: { type: Btns }) => {
         href1 = "https://hh.kz/resume/8f9572cdff0b8bf0180039ed1f4d734345396d";
         href2 = "#contact";
         target = "_self";
-        btn1Text = t("resume");
-        btn2Text = t("contact-info");
+        btn1Text = t("btn_resume");
+        btn2Text = t("btn_contact");
         break;
 
       case Btns.Project1:
         btnClass1 += " w-28";
-        console.log(btnClass1);
         btnClass2 = btnClass1;
         href1 = "https://github.com/alinur91/quiz-app";
         href2 = "https://brilliant-zabaione-e8f99f.netlify.app/";
