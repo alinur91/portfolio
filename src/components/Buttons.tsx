@@ -27,14 +27,14 @@ const Buttons = ({ type }: { type: Btns }) => {
         break;
 
       case Btns.Project1:
-        btnClass1 += " w-auto w-28";
+        btnClass1 += " w-28";
         btnClass2 = btnClass1;
         href1 = "https://github.com/alinur91/quiz-app";
         href2 = "https://brilliant-zabaione-e8f99f.netlify.app/";
         break;
 
       case Btns.Project2:
-        btnClass1 += " w-auto w-28";
+        btnClass1 += " w-28";
         btnClass2 = btnClass1;
         href1 =
           "https://github.com/alinur91/e-commerce-search-and-filtering-only-";
@@ -42,7 +42,7 @@ const Buttons = ({ type }: { type: Btns }) => {
         break;
 
       case Btns.Project3:
-        btnClass1 += " w-auto w-28";
+        btnClass1 += " w-28";
         btnClass2 = btnClass1;
         href1 = "https://github.com/alinur91/chat-application";
         href2 = "https://github.com/alinur91/chat-application";
