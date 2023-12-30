@@ -25,6 +25,32 @@ const LanguageSelector = () => {
     );
   };
 
+  const showListOfLanguages = (showLanguageOptions: boolean) => {
+    return showLanguageOptions ? (
+      <ul className="absolute top-[100%] flex flex-col gap-4 w-full">
+        {languages.map((languageInfo) => (
+          <li
+            className={`${
+              languageInfo.code === i18n.language ? "text-slate-400" : ""
+            }`}
+            key={languageInfo.code}
+            onClick={() => i18n.changeLanguage(languageInfo.code)}
+          >
+            {languageInfo.language}
+          </li>
+        ))}
+      </ul>
+    ) : undefined;
+  };
+
+  const showArrowIcon = (showLanguageOptions: boolean) => {
+    return (
+      <div className="group-hover:text-slate-400">
+        {showLanguageOptions ? <IoIosArrowUp /> : <IoIosArrowDown />}
+      </div>
+    );
+  };
+
   return (
     <div
       onClick={() => setShowLanguageOptions((val) => !val)}
@@ -32,25 +58,9 @@ const LanguageSelector = () => {
     >
       <div className="flex items-center gap-1 group">
         {getShorthandLanguageName(languages, i18n.language)}
-        <div className="group-hover:text-slate-400">
-          {showLanguageOptions ? <IoIosArrowUp /> : <IoIosArrowDown />}
-        </div>
+        {showArrowIcon(showLanguageOptions)}
       </div>
-      {showLanguageOptions && (
-        <ul className="absolute top-[100%] flex flex-col gap-4 w-full">
-          {languages.map((languageInfo) => (
-            <li
-              className={`${
-                languageInfo.code === i18n.language ? "text-slate-400" : ""
-              }`}
-              key={languageInfo.code}
-              onClick={() => i18n.changeLanguage(languageInfo.code)}
-            >
-              {languageInfo.language}
-            </li>
-          ))}
-        </ul>
-      )}
+      {showListOfLanguages(showLanguageOptions)}
     </div>
   );
 };
