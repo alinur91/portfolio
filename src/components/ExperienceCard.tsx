@@ -14,7 +14,7 @@ const ExperienceCard = ({ data }: { data: TechnologyType[] }) => {
       <div className="grid gap-7 sm:gap-8  md:gap-12 lg:gap-10  sm:p-2  grid-cols-2    sm:grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3">
         {data.map((technology) => (
           <div key={technology.name} className="flex items-start gap-4">
-            <HiMiniCheckBadge fontSize="32px" />
+            <HiMiniCheckBadge className="flex-none" fontSize="32px" />
             <div>
               <h3 className="font-bold">{technology.name}</h3>
               <p className="text-gray-500">{t(`Level_${technology.level}`)}</p>
