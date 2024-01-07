@@ -29,8 +29,8 @@ const Buttons = ({ type }: { type: Btns }) => {
       case Btns.Project1:
         btnClass1 = btnClass1.replace("w-[140px]", "w-28");
         btnClass2 = btnClass1;
-        href1 = "https://github.com/alinur91/todos";
-        href2 = "https://astonishing-praline-ab841d.netlify.app/";
+        href1 = "https://github.com/alinur91/quiz-app";
+        href2 = "https://brilliant-zabaione-e8f99f.netlify.app/";
         break;
 
       case Btns.Project2:
