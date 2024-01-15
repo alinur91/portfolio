@@ -32,7 +32,7 @@ export const cardsData = [
     imgClass: projectsCardInfo.imgClass,
     titleClass: projectsCardInfo.titleClass,
     imgSrc: project1,
-    titleText: "quiz",
+    titleText: "todo",
     btnType: Btns.Project1,
   },
   {
