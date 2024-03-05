@@ -7,7 +7,7 @@ import { useState } from "react";
 
 const Header = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
-  const { t } = useTranslation('header');
+  const { t } = useTranslation("header");
   const toggleShowMobileMenu = () => {
     setShowMobileMenu((value) => !value);
   };
