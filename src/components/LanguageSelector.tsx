@@ -12,8 +12,11 @@ const LanguageSelector = () => {
   const [showLanguageOptions, setShowLanguageOptions] = useState(false);
   const { i18n } = useTranslation();
 
-  const foundLanguage = languages.find((lan) => lan.code === i18n.language);
-  const language = foundLanguage ? foundLanguage.language : "";
+  const foundLanguage = languages.find(
+    (lan) => lan.code === i18n.language
+  )?.language;
+
+  if (!foundLanguage) return;
 
   return (
     <div
@@ -23,9 +26,7 @@ const LanguageSelector = () => {
       <div className="flex items-center gap-1 group">
         <span>
           {" "}
-          {language
-            ? language.charAt(0).toUpperCase() + language.slice(1, 3)
-            : ""}
+          {foundLanguage.charAt(0).toUpperCase() + foundLanguage.slice(1, 3)}
         </span>
         <div className="group-hover:text-slate-400">
           {showLanguageOptions ? <IoIosArrowUp /> : <IoIosArrowDown />}
