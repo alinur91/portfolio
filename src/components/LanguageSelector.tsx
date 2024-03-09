@@ -11,10 +11,14 @@ const languages = [
 const LanguageSelector = () => {
   const [showLanguageOptions, setShowLanguageOptions] = useState(false);
   const { i18n } = useTranslation();
-
-  const foundLanguage = languages.find(
-    (lan) => lan.code === i18n.language
-  )?.language;
+  
+  const foundLanguage = languages.find((lan) => {
+    let language = i18n.language;
+    if (language === "en-US") {
+      language = language.substring(0, 2);
+    }
+    return lan.code === language;
+  })?.language;
 
   if (!foundLanguage) return;
 
