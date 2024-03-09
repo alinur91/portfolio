@@ -30,7 +30,8 @@ const LanguageSelector = () => {
       <div className="flex items-center gap-1 group">
         <span>
           {" "}
-          {foundLanguage.charAt(0).toUpperCase() + foundLanguage.slice(1, 3)}
+          {foundLanguage.charAt(0).toUpperCase() +
+            foundLanguage.substring(1, 3)}
         </span>
         <div className="group-hover:text-slate-400">
           {showLanguageOptions ? <IoIosArrowUp /> : <IoIosArrowDown />}
