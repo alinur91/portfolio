@@ -1,6 +1,5 @@
 import { TechnologyType } from "../ts/types";
-import todo from "../images/todo.png";
-// import project1 from "../images/project1.png";
+import quiz2 from "../images/quiz2.png";
 import project2 from "../images/project2.png";
 import project3 from "../images/project3.png";
 import { Btns } from "../ts/enums";
@@ -31,8 +30,8 @@ export const cardsData = [
     cardClass: projectsCardInfo.cardClass,
     imgClass: projectsCardInfo.imgClass,
     titleClass: projectsCardInfo.titleClass,
-    imgSrc: todo,
-    titleText: "todo",
+    imgSrc: quiz2,
+    titleText: "quiz",
     btnType: Btns.Project1,
   },
   {
